@@ -23,9 +23,6 @@ export class UserActiveService {
             localStorage.setItem('user', JSON.stringify(response));
           })
           .catch((error: any) => {
-            console.log(error);
-            console.log("ES EL CATCH");
-            alert("ACAA EL CATCH");
             window.location.href = 'http://localhost:4200/notfound';
           }
         );
