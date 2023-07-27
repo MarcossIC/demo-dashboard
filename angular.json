@@ -31,14 +31,6 @@
             "scripts": []
           },
           "configurations": {
-            "netlify": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/enviroment.netlify.ts"
-                }
-              ]
-            },
             "production": {
               "budgets": [
                 {
