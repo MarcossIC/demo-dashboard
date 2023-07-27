@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RedirectComponent implements OnInit {
   constructor(){}
   ngOnInit() {
-    window.location.href = 'http://localhost:5173';
+    window.location.href = 'https://marvelous-fairy-2dbca1.netlify.app/';
    
   }
 

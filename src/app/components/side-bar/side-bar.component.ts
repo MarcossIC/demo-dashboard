@@ -28,6 +28,6 @@ export class SideBarComponent implements OnInit{
   }
 
   rediret(){
-    window.location.href = 'https://marvelous-fairy-2dbca1.netlify.app';
+    window.location.href = 'https://marvelous-fairy-2dbca1.netlify.app/';
   }
 }
