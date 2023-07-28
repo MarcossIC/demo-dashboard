@@ -10,9 +10,7 @@ import { ApiService } from "src/app/services/api.service";
     rooms: Room[] = [];
     activities: Activity[] = [];
   
-      constructor(private api: ApiService){ 
-       
-      }
+      constructor(private api: ApiService){ }
 
       loadRooms(rooms: Room[]){
         rooms.forEach(element => {

@@ -3,6 +3,7 @@ import { ApiService } from '../services/api.service';
 import { UserActive } from '../models/userActive.model';
 import { identifierName } from '@angular/compiler';
 import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -11,32 +12,25 @@ export class UserActiveService {
 
     userActive!: UserActive;
 
-    constructor(private api: ApiService){}
+    constructor(private api: ApiService, private router: Router){}
 
      retriveUser(id: string){
-      let user = localStorage.getItem("user");
+      
 
-      if(user === null || user === undefined){
-        firstValueFrom(this.api.httpGet("active/"+id))
+      firstValueFrom(this.api.httpGet("active/"+id))
           .then((response: any) => {
-            
+            response.picture = response.picture = "default" ? "https://i.stack.imgur.com/l60Hf.png" : response.picture;
             localStorage.setItem('user', JSON.stringify(response));
           })
           .catch((error: any) => {
-            window.location.href = 'http://localhost:4200/notfound';
+            console.log(error);
+            alert("stop");
+            this.router.navigate(['/notfound']);
           }
         );
-        
-      } else {
-        const userObj = JSON.parse(user);
-
-        if(id === null || userObj.id != id){
-          alert("PARAA "+id+" ID OBJ "+userObj.id);
-          window.location.href = 'http://localhost:4200/notfound';
-        }
-      }
-
-      this.loadUserActive(JSON.parse( localStorage.getItem('user') ?? '{}') );  
+        console.log( localStorage.getItem('user') ?? "das" );
+        console.log(JSON.parse( localStorage.getItem('user') ?? "das" ) );
+        this.loadUserActive(JSON.parse( localStorage.getItem('user') ?? '{}') );  
      }
 
     loadUserActive(user: any){

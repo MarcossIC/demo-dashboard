@@ -31,6 +31,10 @@ import { HistoryModalComponent } from "./historyModal/historyModal.component";
         { 
           path: 'user/:id',
           component: UserPanelPageComponent
+        },
+        { 
+          path: 'users/:id',
+          component: UserPanelPageComponent
         }
       ]
       )

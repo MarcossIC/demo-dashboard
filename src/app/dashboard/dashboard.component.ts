@@ -37,7 +37,6 @@ export class DashBoardPageComponent implements OnInit{
         this.customerManager.loadCustomers(response);
       })
       .catch((error: any) => {
-        alert("FALLE EN CUSTOMERS");
         console.error('Error al obtener datos del servidor:', error);
       });
 
@@ -50,7 +49,6 @@ export class DashBoardPageComponent implements OnInit{
           this.employeeManager.loadEmployees(response);
         })
         .catch((error: any) => {
-          alert("FALLE EN EMPLOYEE");
           console.error('Error al obtener datos del servidor:', error);
         });
 
@@ -62,7 +60,6 @@ export class DashBoardPageComponent implements OnInit{
         this.activityRoomManager.loadRooms(response);
       })
       .catch((error: any) => {
-        alert("FALLE EN EMPLOYEE");
         console.error('Error al obtener datos del servidor:', error);
       });
     }
@@ -73,7 +70,6 @@ export class DashBoardPageComponent implements OnInit{
         this.activityRoomManager.loadActivities(response);
       })
       .catch((error: any) => {
-        alert("FALLE EN EMPLOYEE");
         console.error('Error al obtener datos del servidor:', error);
       });
     }

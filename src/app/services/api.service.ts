@@ -13,7 +13,6 @@ export class ApiService {
 
     httpGet(path: string): Observable<any> {
         const url = `${this.prodUrl}/${path}`;
-        console.log(url);
         return this.http.get<any>(url);
     }
 
@@ -23,7 +22,6 @@ export class ApiService {
     }
 
     httpPut(path: string, body: any): Observable<any> {
-      console.log(path);
         const url = `${this.prodUrl}/${path}`;
         return this.http.put<any>(url, body);
       }

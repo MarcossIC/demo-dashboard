@@ -89,7 +89,12 @@ export class UserPanelManager{
           this.service.updateUserActive(this.userUpdate);
         },
         error: (err) => {
-          alert("ERROR");
+          console.log(err);
+          console.log(err.json);
+          console.log(err.value);
+          console.log(err.data);
+          console.log(err.response);
+          alert("Asd")
         },
         complete: () => {
           localStorage.setItem('user', this.userUpdate);

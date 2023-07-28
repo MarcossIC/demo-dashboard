@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { UserActiveService } from "src/app/common/userActiveService.service";
 
 @Component({
     selector: 'usepanel-header',
@@ -7,4 +9,10 @@ import { Component } from "@angular/core";
   })
 export class UserPanelHeaderComponent {
   user: any = JSON.parse(localStorage.getItem('user') ?? '{}');
+
+  constructor(private router: Router, protected userService: UserActiveService){}
+
+  redirect(){
+    this.router.navigate(['/']);
+  }
 }

@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-redirect',
-  template: '<p>Adios</p>',
-  styleUrls: []
+  templateUrl: './redirect.component.html',
+  styleUrls: ['./redirect.component.css']
 })
 export class RedirectComponent implements OnInit {
   constructor(){}
+  
   ngOnInit() {
-    window.location.href = 'https://marvelous-fairy-2dbca1.netlify.app/';
-   
+    window.location.href = 'https://remarkable-fox-3bb886.netlify.app/';
+    localStorage.setItem("user", "{}");
   }
 
 }

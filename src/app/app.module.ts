@@ -5,7 +5,7 @@ import { DashboardModule } from "./dashboard/dashboard.module";
 import { CommonModule } from "@angular/common";
 import { RedirectComponent } from "./common/redirect/redirect.component";
 import { AppRoutingModule } from "./app-routing.module";
-import { NotFoundComponent } from "./common/redirect/NotFound.component";
+import { NotFoundComponent } from "./common/notfound/notfound.component";
 import { UserPanelModule } from "./userpanel/userpanel.module";
 import { SuccessAlertComponent } from "./components/alert/alert.component";
 import { SharedModule } from "./common/shared.module";

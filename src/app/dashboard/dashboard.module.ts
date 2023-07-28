@@ -19,6 +19,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SharedModule } from '../common/shared.module';
 import { ActivityRoomPageComponent } from './activityRoom/activityRoom.page';
 import { RoomTableComponent } from './activityRoom/roomTable/roomTable.component';
+import { TrainingPageComponent } from './training/training.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { RoomTableComponent } from './activityRoom/roomTable/roomTable.component
 
     EmployeePageComponent,
     CustomerPageComponent,
-    ActivityRoomPageComponent
+    ActivityRoomPageComponent,
+    TrainingPageComponent
     
   ],
   imports: [
@@ -67,6 +69,10 @@ import { RoomTableComponent } from './activityRoom/roomTable/roomTable.component
           },
           { 
             path: 'activity-rooms',
+            component: ActivityRoomPageComponent
+          },
+          { 
+            path: 'training',
             component: ActivityRoomPageComponent
           }
         ]
