@@ -34,7 +34,7 @@
       </section>
       <span class="text-xs text-zinc-500 font-bold">Navigation</span>
     <ul class="mt-1 space-y-1 text-zinc-400">
-      <li>
+      <li class="hover:bg-slate-300 rounded-xl">
         <a
         [routerLink]="'/dashboard/'+service.userActive.id"
         routerLinkActive="active-link"
@@ -45,7 +45,7 @@
         </a>
       </li>
 
-      <li>
+      <li class="hover:bg-slate-300 rounded-xl">
         <a
           [routerLink]="'/dashboard/'+service.userActive.id+'/employees'"
           routerLinkActive="active-link"
@@ -67,7 +67,7 @@
         </a>
       </li>
 
-      <li>
+      <li class="hover:bg-slate-300 rounded-xl">
         <a
         [routerLink]="'/dashboard/'+service.userActive.id+'/activity-rooms'"  routerLinkActive="active-link"
         [ngClass]="{'bg-zinc-700': isLinkActive('/dashboard/employees') }"
@@ -77,10 +77,10 @@
         </a>
       </li>
 
-      <li>
+      <li class="hover:bg-slate-300 rounded-xl">
         <a
         (click)="redirect()"
-          class="block rounded-lg px-4 py-1 text-sm font-medium hover:text-zinc-600 active:text-gray-600"
+          class="block rounded-lg px-4 py-1 text-sm font-medium select-none cursor-pointer hover:text-zinc-600 active:text-gray-600"
         >
           <div class="flex">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
